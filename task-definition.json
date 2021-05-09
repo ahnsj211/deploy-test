@@ -1,6 +1,6 @@
 {
   "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::496714285532:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::496714285532:role/hpayEcsTaskExecutionRole",
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
@@ -37,7 +37,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "496714285532.dkr.ecr.ap-northeast-2.amazonaws.com/hpay-test:latest",
+      "image": "496714285532.dkr.ecr.ap-northeast-2.amazonaws.com/hpay-test:1c647ae0d981e94accfe037811e146830d862848",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -59,12 +59,12 @@
   ],
   "placementConstraints": [],
   "memory": "1024",
-  "taskRoleArn": null,
+  "taskRoleArn": "arn:aws:iam::496714285532:role/hpayEcsTaskExecutionRole",
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:496714285532:task-definition/hpay-test:2",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:496714285532:task-definition/hpay-test:12",
   "family": "hpay-test",
   "requiresAttributes": [
     {
@@ -95,6 +95,12 @@
       "targetId": null,
       "targetType": null,
       "value": null,
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
       "name": "ecs.capability.execution-role-ecr-pull"
     },
     {
@@ -116,7 +122,7 @@
   ],
   "networkMode": "awsvpc",
   "cpu": "512",
-  "revision": 2,
+  "revision": 12,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
