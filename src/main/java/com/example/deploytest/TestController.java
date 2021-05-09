@@ -14,6 +14,6 @@ public class TestController {
 
     @RequestMapping("/test")
     public String test() {
-        return "deploy test3";
+        return "deploy test4";
     }
 }
