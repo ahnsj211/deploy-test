@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/hpay-deploytest-task",
+          "awslogs-group": "/ecs/hpay-test",
           "awslogs-region": "ap-northeast-2",
           "awslogs-stream-prefix": "ecs"
         }
@@ -37,7 +37,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "496714285532.dkr.ecr.ap-northeast-2.amazonaws.com/hpay-test-repository",
+      "image": "496714285532.dkr.ecr.ap-northeast-2.amazonaws.com/hpay-test:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -54,18 +54,18 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "hpay-deploy-test-container"
+      "name": "hpay-container-test"
     }
   ],
   "placementConstraints": [],
-  "memory": "512",
+  "memory": "1024",
   "taskRoleArn": null,
   "compatibilities": [
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:496714285532:task-definition/hpay-deploytest-task:1",
-  "family": "hpay-deploytest-task",
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:496714285532:task-definition/hpay-test:2",
+  "family": "hpay-test",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -115,8 +115,8 @@
     "FARGATE"
   ],
   "networkMode": "awsvpc",
-  "cpu": "256",
-  "revision": 1,
+  "cpu": "512",
+  "revision": 2,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
