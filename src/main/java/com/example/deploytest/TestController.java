@@ -14,6 +14,7 @@ public class TestController {
 
     @RequestMapping("/test")
     public String test() {
+        System.out.println("call api");
         return "test call";
     }
 }
